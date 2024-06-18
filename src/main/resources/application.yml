@@ -1,0 +1,33 @@
+#Database
+spring:
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    open-in-view: true
+
+  datasource:
+    driverClassName: org.h2.Driver
+    username: root
+    password: root
+    url: jdbc:h2:./src/main/resources/users
+
+  h2:
+    console:
+      enabled: false
+      settings:
+        web-allow-others: true
+
+#Server
+server:
+  port: 8181
+
+#Swagger Config
+springdoc:
+  swagger-u:
+    use-root-path: true
+
